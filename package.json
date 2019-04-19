@@ -1,0 +1,58 @@
+{
+  "name": "react-hooks-p5js",
+  "version": "2.0.0-SNAPSHOT",
+  "private": true,
+  "description": "Using ",
+  "keywords": [
+    "react",
+    "context",
+    "hooks",
+    "p5js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atorov/react-hooks-p5js.git"
+  },
+  "bugs": "https://github.com/atorov/react-hooks-p5js.git/issues",
+  "author": "atorov",
+  "license": "MIT",
+  "main": "src/index.jsx",
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "build": "npm run build:prod",
+    "build:prod": "npm run clean && NODE_ENV=production webpack",
+    "start": "nodemon --watch webpack.*.js --exec \"NODE_ENV=development webpack-dev-server\""
+  },
+  "dependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.5.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.2",
+    "core-js": "^3.0.1",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "nodemon": "^1.18.11",
+    "postcss-loader": "^3.0.0",
+    "regenerator-runtime": "^0.13.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
