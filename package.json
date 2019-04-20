@@ -19,8 +19,7 @@
   "main": "src/index.jsx",
   "scripts": {
     "clean": "rm -rf ./build",
-    "build": "npm run build:prod",
-    "build:prod": "npm run clean && NODE_ENV=production webpack",
+    "build": "npm run clean && NODE_ENV=production webpack",
     "start": "nodemon --watch webpack.*.js --exec \"NODE_ENV=development webpack-dev-server\""
   },
   "dependencies": {
