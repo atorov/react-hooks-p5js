@@ -1,6 +1,7 @@
 export default {
     slider: 40,
-    sketch1: true,
+    sketch1L: true,
+    sketch1R: true,
     sketch2: true,
-    sketch3: true,
+    bgndColor: '#ddd',
 }

@@ -14,22 +14,22 @@ export default function Section2() {
     const dispatch = useContext(AppDispatchContext)
     const {
         slider,
-        sketch1,
-        sketch2,
+        sketch1L,
+        sketch1R,
     } = useContext(AppStateContext)
 
     return (
         <div className="section">
             <h5>Section #2</h5>
-            <div className="section section-2-content">
-                {sketch1 && (
+            <div className="section section-content">
+                {sketch1L && (
                     <P5Wrapper1
                         dispatch={dispatch}
                         sketch={sketch1Src}
                         state={{ slider: 100 - slider }}
                     />
                 )}
-                {sketch2 && (
+                {sketch1R && (
                     <P5Wrapper2
                         dispatch={dispatch}
                         sketch={sketch1Src}

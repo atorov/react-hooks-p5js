@@ -25,9 +25,15 @@ export default function (id) {
     }
 
     P5Wrapper.propTypes = {
-        dispatch: PropTypes.func.isRequired,
-        sketch: PropTypes.func.isRequired,
-        state: PropTypes.object.isRequired,
+        dispatch: PropTypes.func,
+        sketch: PropTypes.func,
+        state: PropTypes.object,
+    }
+
+    P5Wrapper.defaultProps = {
+        dispatch: () => { },
+        sketch: () => { },
+        state: {},
     }
 
     return memo(P5Wrapper, (_, nextProps) => {

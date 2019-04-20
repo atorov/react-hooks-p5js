@@ -6,13 +6,17 @@ export default function Section1() {
     const dispatch = useContext(AppDispatchContext)
     const {
         slider,
-        sketch1,
+        sketch1L,
+        sketch1R,
         sketch2,
-        sketch3,
+        bgndColor,
     } = useContext(AppStateContext)
 
     return (
-        <div className="section">
+        <div
+            className="section"
+            style={{ background: bgndColor }}
+        >
             <h5>Section #1</h5>
             <div className="inputs-wrapper">
                 <em>{slider}</em>
@@ -36,13 +40,26 @@ export default function Section1() {
                     onClick={() => dispatch({
                         type: 'TOGGLE_SKETCH',
                         payload: {
-                            key: 'sketch1',
-                            value: !sketch1,
+                            key: 'sketch1L',
+                            value: !sketch1L,
                         },
                     })}
                 >
-                    Toggle Sketch 1
+                    Toggle Sketch 1L
                 </button>
+                <button
+                    type="button"
+                    onClick={() => dispatch({
+                        type: 'TOGGLE_SKETCH',
+                        payload: {
+                            key: 'sketch1R',
+                            value: !sketch1R,
+                        },
+                    })}
+                >
+                    Toggle Sketch 1R
+                </button>
+                <br />
                 <button
                     type="button"
                     onClick={() => dispatch({
@@ -54,18 +71,6 @@ export default function Section1() {
                     })}
                 >
                     Toggle Sketch 2
-                </button>
-                <button
-                    type="button"
-                    onClick={() => dispatch({
-                        type: 'TOGGLE_SKETCH',
-                        payload: {
-                            key: 'sketch3',
-                            value: !sketch3,
-                        },
-                    })}
-                >
-                    Toggle Sketch 3
                 </button>
             </div>
         </div>

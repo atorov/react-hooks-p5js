@@ -4,8 +4,10 @@ export default function (s) {
 
     s.setup = () => {
         s.createCanvas(150, 150)
+
         // console.log('::: displayDensity:', s.displayDensity())
         // console.log('::: pixelDensity:', s.pixelDensity())
+
         console.log('::: sketch-1 has been initialized')
     }
 
