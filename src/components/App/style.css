@@ -2,8 +2,26 @@
     font-family: Roboto, sans-serif;
 }
 
-.container {
+.app-content {
     max-width: 1024px;
-    margin: 0 auto;
-    padding: 0;
+}
+
+.section {
+    margin: 8px auto;
+    padding: 8px;
+    border: 1px dashed lightgray;
+    border-radius: 4px;
+}
+
+.section-2-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider {
+    width: 100%;
+}
+
+.inputs-wrapper {
+    text-align: center;
 }

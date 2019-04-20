@@ -10,6 +10,7 @@ module.exports = {
             4,
             { 'SwitchCase': 1 }
         ],
+        'new-cap': 0,
         'max-len': 0,
         'no-console': 0,
         'no-param-reassign': 0,
@@ -29,5 +30,8 @@ module.exports = {
         'react/jsx-indent-props': ['error', 4],
         'react/no-array-index-key': 0,
         'react/prefer-stateless-function': 0,
+    },
+    globals: {
+        window: true
     }
 }
