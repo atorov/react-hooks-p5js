@@ -9,6 +9,7 @@
         "devtool",
         "entrypoint",
         "max",
+        "minified",
         "plusplus",
         "size",
         "stroustrup"
