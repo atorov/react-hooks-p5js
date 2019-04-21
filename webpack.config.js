@@ -90,7 +90,7 @@ const config = {
                 },
                 {
                     from: SRC + '/assets/img',
-                    to: DIST + '/assets/img',
+                    to: DIST + '/img',
                 },
             ],
             {
