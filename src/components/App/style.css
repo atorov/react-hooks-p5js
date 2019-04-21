@@ -1,9 +1,18 @@
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
 #app-root {
     font-family: Roboto, sans-serif;
 }
 
 .app-content {
     max-width: 1024px;
+}
+
+.github {
+    text-align: center;
 }
 
 .section {
