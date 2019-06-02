@@ -92,6 +92,10 @@ const config = {
                     from: SRC + '/assets/img',
                     to: DIST + '/img',
                 },
+                {
+                    from: SRC + '/assets/audio',
+                    to: DIST + '/audio',
+                },
             ],
             {
                 ignore: ['.DS_Store'],

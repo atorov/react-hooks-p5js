@@ -6,10 +6,22 @@ export default function (state, { type, payload }) {
                 bgndColor: payload,
             }
 
+        case 'SET_PLAY_AUDIO':
+            return {
+                ...state,
+                playAudio: payload,
+            }
+
         case 'SET_SLIDER_VALUE':
             return {
                 ...state,
                 slider: payload,
+            }
+
+        case 'TOGGLE_PLAY_AUDIO':
+            return {
+                ...state,
+                playAudio: !state.playAudio,
             }
 
         case 'TOGGLE_SKETCH':

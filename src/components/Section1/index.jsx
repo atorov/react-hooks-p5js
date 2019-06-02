@@ -9,6 +9,7 @@ export default function Section1() {
         sketch1L,
         sketch1R,
         sketch2,
+        sketchAudio,
         bgndColor,
     } = useContext(AppStateContext)
 
@@ -71,6 +72,25 @@ export default function Section1() {
                     })}
                 >
                     Toggle Sketch 2
+                </button>
+                <br />
+                <button
+                    type="button"
+                    onClick={() => {
+                        dispatch({
+                            type: 'TOGGLE_SKETCH',
+                            payload: {
+                                key: 'sketchAudio',
+                                value: !sketchAudio,
+                            },
+                        })
+                        dispatch({
+                            type: 'SET_PLAY_AUDIO',
+                            payload: false,
+                        })
+                    }}
+                >
+                    Toggle Sketch Audio
                 </button>
             </div>
         </div>

@@ -6,7 +6,12 @@ import { generate } from 'shortid'
 export default function (id = generate()) {
     let canvas = null
 
-    function P5Wrapper({ sketch, dispatch, state }) {
+    function P5Wrapper({
+        sketch = () => { },
+        dispatch = () => { },
+        state = {},
+    }) {
+        console.log(typeof sketch)
         console.log(`::: P5Wrapper(${id}) component has been re-rendered`)
 
         const elementId = `p5-wrapper-${id}`

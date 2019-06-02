@@ -1,6 +1,7 @@
 # Using React with p5.js
 
 ![alt application screenshot](https://github.com/atorov/react-hooks-p5js/blob/master/src/assets/demo/screencast.gif)
+![alt application screenshot](https://github.com/atorov/react-hooks-p5js/blob/master/src/assets/demo/screencast-2.gif)
 
 This project demonstrates how to combine React (including the latest features such as **hooks and context**) and p5.js:
 
@@ -8,6 +9,7 @@ This project demonstrates how to combine React (including the latest features su
 - Multiple instances of one sketch mounted in a same component;
 - Mount sketches in different points of the DOM tree;
 - Dynamically switch on/off sketches;
+- p5.js libraries support (p5.sound example)
 - Bidirectional communication between the main React app and sketches;
 - Using the latest React features:
   - memo()
