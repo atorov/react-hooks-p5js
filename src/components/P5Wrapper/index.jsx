@@ -1,7 +1,9 @@
 import React, { memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-export default function (id) {
+import { generate } from 'shortid'
+
+export default function (id = generate()) {
     let canvas = null
 
     function P5Wrapper({ sketch, dispatch, state }) {
