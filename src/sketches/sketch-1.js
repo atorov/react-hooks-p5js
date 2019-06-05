@@ -1,6 +1,6 @@
 export default function (s) {
     s.state = {}
-    s.dispatch = () => { }
+    // s.dispatch = () => { }
 
     s.setup = () => {
         s.createCanvas(150, 150)

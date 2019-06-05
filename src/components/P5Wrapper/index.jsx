@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import { generate } from 'shortid'
@@ -8,39 +8,44 @@ export default function (id = generate()) {
 
     function P5Wrapper({
         sketch = () => { },
-        dispatch = () => { },
         state = {},
+        dispatch = () => { },
     }) {
-        console.log(typeof sketch)
         console.log(`::: P5Wrapper(${id}) component has been re-rendered`)
 
-        const elementId = `p5-wrapper-${id}`
+        const sketchContainer = useRef(null)
 
         useEffect(() => {
-            canvas = new window.p5(sketch, elementId)
+            console.log(`::: P5Wrapper(${id})/useEffect()`)
+            canvas = new window.p5(sketch, sketchContainer.current)
+            canvas.state = state
             canvas.dispatch = dispatch
-            canvas.state = { ...state }
 
-            return () => canvas.remove()
-        }, [dispatch, elementId, sketch, state])
+            return () => {
+                console.log(`::: P5Wrapper(${id})/useEffect.return()`)
+                canvas.remove()
+            }
+        }, [dispatch, sketch, state])
 
         return (
-            <div id={elementId} className="section">
+            <div ref={sketchContainer} className="section">
                 <h5>{`P5Wrapper #${id}`}</h5>
             </div>
         )
     }
 
     P5Wrapper.propTypes = {
+        state: PropTypes.object,
+
         dispatch: PropTypes.func,
         sketch: PropTypes.func,
-        state: PropTypes.object,
     }
 
     P5Wrapper.defaultProps = {
+        state: {},
+
         dispatch: () => { },
         sketch: () => { },
-        state: {},
     }
 
     return memo(P5Wrapper, (_, nextProps) => {
